@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coral Bleaching Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Coral Bleaching Prediction</h1>
+        <p>Select a mode to proceed:</p>
+        <form action="/mode" method="post">
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="area" name="mode" value="area" required>
+                    <label for="area" class="right-label">Area Selection</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="point" name="mode" value="point">
+                    <label for="point" class="right-label">Point Selection</label>
+                </div>
+            </div>
+            <button type="submit" class="small-btn">Select Mode</button>
+        </form>
+    </div>
+</body>
+</html>

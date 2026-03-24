@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Area Selection</h1>
+        <form action="/predict_area" method="POST">
+            <div class="input-group">
+                <!-- Left side for Latitude and Longitude -->
+                <div class="lat-lon">
+                    <label>Latitude 1:</label><input type="text" name="lat1" required><br>
+                    <label>Longitude 1:</label><input type="text" name="lon1" required><br>
+
+                    <label>Latitude 2:</label><input type="text" name="lat2" required><br>
+                    <label>Longitude 2:</label><input type="text" name="lon2" required><br>
+
+                    <label>Latitude 3:</label><input type="text" name="lat3" required><br>
+                    <label>Longitude 3:</label><input type="text" name="lon3" required><br>
+
+                    <label>Latitude 4:</label><input type="text" name="lat4" required><br>
+                    <label>Longitude 4:</label><input type="text" name="lon4" required><br>
+                </div>
+
+                <!-- Right side for SST, pH, and Predict -->
+                <div class="sst-ph">
+                    <label>Average SST:</label><input type="text" name="sst" required><br>
+                    <label>Average pH:</label><input type="text" name="ph" required><br>
+                    <button type="submit">Predict</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

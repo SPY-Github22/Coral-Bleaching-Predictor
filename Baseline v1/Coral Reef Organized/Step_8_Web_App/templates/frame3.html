@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Point Selection</h1>
+        <form action="/predict_point" method="POST">
+            <div class="input-group">
+                <!-- Left side for Latitude and Longitude -->
+                <div class="lat-lon">
+                    <label>Latitude:</label><input type="text" name="lat" required><br>
+                    <label>Longitude:</label><input type="text" name="lon" required><br>
+                </div>
+
+                <!-- Right side for SST, pH, and Predict -->
+                <div class="sst-ph">
+                    <label>Average SST:</label><input type="text" name="sst" required><br>
+                    <label>Average pH:</label><input type="text" name="ph" required><br>
+                    <button type="submit">Predict</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
